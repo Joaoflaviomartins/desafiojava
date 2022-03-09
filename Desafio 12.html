@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Java</title>
+</head>
+<body>
+    <h1></h1>
+    <button onclick="inicio()">Calcular preço</button>   
+    <section id="reajuste">
+        <p>Clique para calcular a mudança do preço!</p>
+    </section>
+    <script>
+        function inicio() 
+        {
+            let a = window.prompt('Qual o valor anterior?')
+            let b = window.prompt('Qual o valor atual?')
+            let resp = a - b
+            let por = ((b - a)/a)*100
+            let res = window.document.getElementById('reajuste')
+            res.innerHTML = `<p>O produto custava R$${a}</p><p>Hoje o produto custa R$${b}</p><p>A alteração foi de R$${resp}, ou seja ${Math.round(por)} %.</p>`
+        }
+    </script>  
+</body>
+</html>

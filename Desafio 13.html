@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas do aluno</title>
+</head>
+<body>
+    <header>
+        <h1>Notas do aluno</h1>
+    </header>
+
+    <div>
+        <input type="button" value="Insira as notas" onclick="analizar()">
+    </div>
+    <div id="res">
+    </div>
+    <script>
+        function analisar()
+{
+    var nome_aluno = window.prompt("Insira a nota do aluno?")
+    var nota1 = Number(window.prompt(`1º nota ${nome_aluno}:`))
+    var nota2 = Number(window.prompt(`2º nota ${nome_aluno}:`))
+    var res = document.getElementById("res")
+    var media = (nota1 + nota2) / 2
+
+    res.innerHTML = (`<h2>Analisando as notas ${nome_aluno}</h2>`)
+    res.innerHTML += (`<p>Com as notas ${nota1.toLocaleString("pt-BR")} e ${nota2.toLocaleString("pt-BR")}, a <strong>média é ${media.toLocaleString("pt-BR")}</strong></p>`)
+
+    if(media < 3)
+    {
+        res.innerHTML += (`<p>Abaixo de 3 o aluno está reprovado!`)
+    }
+    else if(media >= 3 && media <= 6)
+    {
+        res.innerHTML += (`<p>Entre 3 e 6 o aluno está de recuperação!`)
+    }
+    else
+    {
+        res.innerHTML += (`<p>Acima de 6 o aluno está aprovado`)  
+    }
+}
+    </script>
+</body>
+</html>

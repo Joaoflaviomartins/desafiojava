@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Java</title>
+</head>
+<body>
+    <h1>Desafio 9</h1>
+    <button onclick="inicio()">RCalcular reajuste</button>
+    <script>
+    function inicio()
+     {
+        let func = window.prompt('Insira o nome do colaborador?')
+        let sal = window.prompt(`Insira o salário do mesmo?`)
+        let reaj = window.prompt(`O salario de ${func} vai ser reajustado em quantos % ?`)           
+        let por = (sal * reaj)/100
+        let total = (sal * 1)+por
+        let res = window.document.getElementById('reajuste')
+        res.innerHTML = `<h2>${func} recebeu um aumento salarial !</h2><p>Salario atual R$${sal}.</p><p>Com o aumento de ${reaj}%,</p><p> aumento R$${por}</p><p> Total R$${Math.round(total)}.</p>` 
+    }
+</script>  
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Java</title>
+</head>
+<body>
+  <h1>Desafio 11</h1>
+<input type="text" id = "ano"/> 
+<input type="button" id="button" onClick="bissexto()" value="Verificar se o ano é bissexto"> <p id="GFG"></p>
+   <script> 
+   function bissexto() { 
+   let ano = document.getElementById("ano").value; document.getElementById("GFG").innerHTML = (ano % 100 === 0) ? (ano % 400 === 0) : (ano % 4 === 0);
+    }
+</script> 
+</body> 
+</html>
